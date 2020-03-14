@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+      <title>
+        soal 3 DW
+      </title>
+    <link rel="stylesheet" href="3_js.css" type="text/css">
+  </head>
+
+  <body>
+    <div class="gambar">
+      <form action="" onsubmit="gambar(event)">
+        <fieldset>
+          Panjang gambar:<br><br>
+          <input type="number" id="panjang">
+          <br><br>
+          <input type="submit" value="submit">
+          <p>---panjang---</p>
+          <p id="demo"></p>
+        </fieldset>
+      </form>
+    </div>
+
+    <script>
+      function gambar(event) {
+      	event.preventDefault();
+        var text = "";
+        var k = document.getElementById("panjang").value;
+        var i;
+        var j;
+        for (i = 0; i < k; i++) {
+          for (j = 0; j < k; j++) {
+          	if(i%2==0){
+            	if(j%2==0){
+              	text += "*" + "&nbsp &nbsp";
+              	}
+              	else{
+              	text += "="+ "&nbsp &nbsp";
+              	}
+            	}
+              else{
+              if(j%2==0){
+                text += "=" + "&nbsp &nbsp";
+                }
+                else{
+                text += "*"+ "&nbsp &nbsp";
+                }
+              }  
+          }
+          text += "<br>";
+        }
+        
+        document.getElementById("demo").innerHTML = text;
+      }
+    </script>
+  </body>
+</html>

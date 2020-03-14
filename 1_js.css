@@ -1,0 +1,9 @@
+.kalkulator{
+    width: 25%;
+    text-align: center;
+}
+
+#hasil{
+    font-size: large;
+    font-weight: bold;
+}

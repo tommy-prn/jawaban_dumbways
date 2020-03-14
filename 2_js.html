@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Soal 2 DW</title>
+    <h1 class = "header">Checker</h1>
+    <link rel="stylesheet" href="2_js.css" type="text/css">
+  </head>
+
+  <body>
+    <button onclick="myfunction()">Try it</button>
+    <br><br>
+      <div class = "kotak">
+        <form>
+          <fieldset>
+            <p id="check"></p>
+          </fieldset>
+          </form>
+        </div>
+
+    <script>
+        function myfunction() {
+            var datakey = ["dumb", "ways", "the", "best"];
+            var word = "dumbways";
+            check(datakey, word);
+        }
+      
+        function check(dataKey, word) {
+            text = "";
+            for (var i = 0; i < dataKey.length; i++) {
+            text += dataKey[i] + "  =>  " + word.includes(dataKey[i]) + "<br>"+"<br>";
+            }   
+        document.getElementById("check").innerHTML = text;
+        }
+
+    </script>
+  </body>
+
+</html>

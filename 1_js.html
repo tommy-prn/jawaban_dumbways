@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <div class = "Header">
+            <title>Soal 1 DW</title>
+            <h1>Tabungan Anda Saat Ini</h1>
+            <link rel="stylesheet" href="1_js.css" type="text/css">
+        </div>
+    </head>
+
+    <body>
+        <div class = "kalkulator">
+            <form action = # onsubmit = "hitung(event)">
+                <fieldset>
+                    Nama:<br>
+                    <input type = "text" id = "nama">
+                    <br><br>
+                    Jumlah bulan:<br>
+                    <input type = "number" id = "bulan">
+                    <br><br>
+                    <input type = "submit" value = "submit">
+                    <p>Jumlah tabungan kamu sekarang</p>
+                    <p id="hasil"></p>
+                </fieldset>
+            </form>
+        </div>
+        
+    <script>
+        function hitung (event){
+            event.preventDefault()
+            var x = 2921690;
+            var y = 2.1;
+            var z = document.getElementById("bulan").value;
+        document.getElementById("hasil").innerHTML = "Rp. " + (x * ((100 + (y*z))/100));
+        }
+    </script>
+
+    </body>
+</html>
